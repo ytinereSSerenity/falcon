@@ -1,0 +1,212 @@
+/* replace colors */
+
+.l-header,
+.form-control,
+.border-bottom,
+.card,
+.dropdown-menu,
+.cart-dropdown__products,
+.cart-products:not(:first-child),
+.custom-select,
+.card-header,
+.list-group-item,
+.noUi-handle,
+.custom-file-input,
+.card-footer,
+.custom-control-input:checked ~ .custom-control-label::before,
+.product-line-grid:not(:last-child),
+.card-body + .card-body {
+  @apply border-gray-200 !important;
+}
+.swiper-button-custom,
+.price,
+a:hover,
+.customer-links a i,
+.customer-links a:not(.active):focus, .customer-links a:not(.active):hover {
+  @apply text-primary-100;
+}
+
+.product-flags__flag,
+.noUi-handle,
+.noUi-connect,
+.display-toggle__link.active,
+.custom-control-input:checked ~ .custom-control-label::before,
+.customer-links a.active{
+  @apply !bg-primary-100
+}
+
+.btn, .form-control, .custom-select,
+.custom-control-input:checked ~ .custom-control-label::before,
+.custom-control-label::before {
+  @apply !outline-0 !shadow-none;
+}
+.btn-primary {
+  @apply bg-primary-100 text-white !border-none hover:bg-primary-200 !shadow-none !important;
+}
+.btn-secondary {
+  @apply bg-primary-300 text-white !border-none hover:bg-primary-400 !shadow-none !important;
+}
+.btn-outline-primary{
+  @apply !border-primary-100 text-primary-100 hover:bg-primary-100 
+}
+.btn-outline-secondary{
+  @apply !border-gray-700 text-gray-700 hover:bg-gray-700
+
+}
+
+.card-footer,
+.card-header{
+  @apply bg-gray-100
+}
+
+.custom-control-input:not(:disabled):active ~ .custom-control-label::before {
+  @apply !bg-primary-100 !bg-opacity-25
+}
+
+.remove-from-cart{
+  @apply text-black hover:text-red-400 !important
+}
+
+.form-control-comment,
+.text-muted
+{
+  @apply text-xs text-gray-700 mt-1
+}
+.alert-info, .alert-warning{
+  @apply bg-primary-400 text-white border-none
+}
+
+/* replace colors END */
+
+/* products */
+.product-miniature__thumb-link img{
+	@apply mx-auto
+}
+
+.product-add-to-cart .btn{
+	@apply h-full
+}
+
+/* products END */
+
+/* others */
+.card.user-form{
+  @apply overflow-hidden
+}
+.customer-links a{
+  @apply my-2
+}
+
+.acc_nav_mob {
+	@apply mb-0 lg:!hidden
+}
+.acc_nav_mob a span svg:last-child{
+	@apply ml-auto
+}
+.customer-links a span svg:first-child{
+ @apply mr-3 w-8
+}
+.acc_nav_mob a.active span svg:last-child{
+	@apply ml-auto transform -scale-y-100 
+}
+.acc_nav_mob a.active span svg:last-child path{
+  @apply  stroke-white
+}
+.acc_nav_mob a:not(.active){
+	@apply !hidden
+}
+.acc_nav_mob > .customer-links__list{
+	@apply overflow-hidden
+}
+
+.acc_nav_desk a{
+	@apply !mt-2 lg:!mt-0 bg-white
+}
+.acc_nav_desk a.active{
+	@apply !hidden lg:!flex
+}
+.acc_nav_desk a span svg:last-child{
+	@apply ml-auto lg:hidden
+}
+
+.acc_nav_desk{
+	@apply !bg-transparent lg:!bg-white
+}
+
+.acc_nav_desk > .customer-links__list{
+@apply overflow-hidden
+}
+
+
+body .nav_logout{
+	@apply !bg-transparent pt-4 pl-5  lg:py-0 lg:px-7  lg:mt-7  !important
+}
+
+
+/* others  END */
+
+.alert{
+  @apply !mb-2
+}
+.alert-info{
+  @apply my-2
+}
+
+/* 
+
+
+
+
+
+
+.product-flags__flag,
+.noUi-handle,
+.noUi-connect,
+.display-toggle__link.active,
+.customer-links a.active {
+	@apply bg-primary-100;
+}
+.price:not(.price--regular),
+.swiper-button-custom,
+.customer-links a i,
+.customer-links a:focus, .customer-links a:hover {
+	@apply text-gray-900
+}
+.noUi-handle {
+	@apply border-primary-100;
+} */
+
+/* replace colors END */
+
+/* top */
+.search-form__input:focus {
+  @apply !bg-white border-primary-100;
+}
+.header-top__icon-container {
+  @apply flex justify-center;
+}
+.icontext {
+  @apply block mt-1 font-normal text-gray-300 text-10 lg:text-xs whitespace-nowrap;
+}
+.header-top__badge {
+  @apply w-5 h-5 flex items-center  justify-center  top-auto bottom-0 transform translate-x-1/3 translate-y-0 right-0 text-11 font-extrabold bg-primary-100;
+}
+#x13favoriteproduct .header-top__badge{
+  @apply  lg:translate-x-0 
+}
+.header-top__link:focus,
+.header-top__link:hover {
+  @apply bg-transparent;
+}
+.header-top__link {
+  @apply p-0 lg:pl-4 hover:text-primary-100;
+}
+.header-top__icon-container {
+  @apply h-6;
+}
+.logo.img-fluid {
+  @apply max-h-[70px];
+}
+/* top header END */
+
+

@@ -1,4 +1,8 @@
 css:
+  all:
+    fileName: main.css
+    media: all
+    priority: 200
   product:
     fileName: product.css
     media: all
@@ -27,6 +31,9 @@ css:
       - module-is_favoriteproducts-favorite
 
 js:
+  all:
+    fileName: main.js
+    priority: 200
   runtime: # This file is only used to handle HMR for multiple entry points
     fileName: runtime.js
     priority: 1

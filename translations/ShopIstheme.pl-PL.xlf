@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+  <file original="admin873syjsidvb0ybgx7gi" source-language="pl-PL" target-language="pl-PL" datatype="plaintext">
+    <body>
+      <trans-unit id="290612199861c31d1036b185b4e69b75">
+        <source>Summary</source>
+        <target>Podsumowanie</target>
+        <note>Line: </note>
+      </trans-unit>
+      <trans-unit id="20d913889c4dc91977fe47843e78a147">
+        <source>Order subtotals</source>
+        <target>Podsumowanie zamówienia</target>
+        <note>Line: </note>
+      </trans-unit>
+      <trans-unit id="4e0c5e25133792076fdb958b00994055">
+        <source>Show results</source>
+        <target>Pokaż wyniki</target>
+        <note>Line: </note>
+      </trans-unit>
+      <trans-unit id="0f98b7f230f3c91292f0de4c99e263f2">
+        <source>Registration</source>
+        <target>Rejestracja</target>
+        <note>Line: </note>
+      </trans-unit>
+      <trans-unit id="d9da38a97856e064ae4ee4e28356ae6b">
+        <source>Login and registration</source>
+        <target>Logowanie i rejestracja</target>
+        <note>Line: </note>
+      </trans-unit>
+      <trans-unit id="99dea78007133396a7b8ed70578ac6ae">
+        <source>Login</source>
+        <target>Logowanie</target>
+        <note>Line: </note>
+      </trans-unit>
+      <trans-unit id="a45ccb188ad38684f5f02ea83b54c59b">
+        <source>Creating an account is simple, and thanks to this you will complete the order faster! Additionally, you have the option of tracking your order and viewing purchase history.</source>
+        <target>Założenie konta jest proste, a dzięki temu szybciej zrealizujesz zamówienie! Dodatkowo masz możliwość śledzenia swojego zamówienia oraz przeglądania historii zakupów. </target>
+        <note>Line: </note>
+      </trans-unit>
+      <trans-unit id="78508319bccdec69025cf02313bf02a3">
+        <source>I want to create an account</source>
+        <target>Chcę założyć konto</target>
+        <note>Line: </note>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

@@ -22,7 +22,8 @@
 .price,
 a:hover,
 .customer-links a i,
-.customer-links a:not(.active):focus, .customer-links a:not(.active):hover {
+.customer-links a:not(.active):focus, .customer-links a:not(.active):hover,
+.search-form__btn {
   @apply text-primary-100;
 }
 

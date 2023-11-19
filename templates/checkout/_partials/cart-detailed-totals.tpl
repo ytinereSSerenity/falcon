@@ -1,27 +1,27 @@
 {**
- * Copyright since 2007 PrestaShop SA and Contributors
- * PrestaShop is an International Registered Trademark & Property of PrestaShop SA
- *
- * NOTICE OF LICENSE
- *
- * This source file is subject to the Academic Free License 3.0 (AFL-3.0)
- * that is bundled with this package in the file LICENSE.md.
- * It is also available through the world-wide-web at this URL:
- * https://opensource.org/licenses/AFL-3.0
- * If you did not receive a copy of the license and are unable to
- * obtain it through the world-wide-web, please send an email
- * to license@prestashop.com so we can send you a copy immediately.
- *
- * DISCLAIMER
- *
- * Do not edit or add to this file if you wish to upgrade PrestaShop to newer
- * versions in the future. If you wish to customize PrestaShop for your
- * needs please refer to https://devdocs.prestashop.com/ for more information.
- *
- * @author    PrestaShop SA and Contributors <contact@prestashop.com>
- * @copyright Since 2007 PrestaShop SA and Contributors
- * @license   https://opensource.org/licenses/AFL-3.0 Academic Free License 3.0 (AFL-3.0)
- *}
+* Copyright since 2007 PrestaShop SA and Contributors
+* PrestaShop is an International Registered Trademark & Property of PrestaShop SA
+*
+* NOTICE OF LICENSE
+*
+* This source file is subject to the Academic Free License 3.0 (AFL-3.0)
+* that is bundled with this package in the file LICENSE.md.
+* It is also available through the world-wide-web at this URL:
+* https://opensource.org/licenses/AFL-3.0
+* If you did not receive a copy of the license and are unable to
+* obtain it through the world-wide-web, please send an email
+* to license@prestashop.com so we can send you a copy immediately.
+*
+* DISCLAIMER
+*
+* Do not edit or add to this file if you wish to upgrade PrestaShop to newer
+* versions in the future. If you wish to customize PrestaShop for your
+* needs please refer to https://devdocs.prestashop.com/ for more information.
+*
+* @author PrestaShop SA and Contributors <contact@prestashop.com>
+  * @copyright Since 2007 PrestaShop SA and Contributors
+  * @license https://opensource.org/licenses/AFL-3.0 Academic Free License 3.0 (AFL-3.0)
+  *}
 {block name='cart_detailed_totals'}
   <div class="cart-detailed-totals js-cart-detailed-totals">
 
@@ -40,6 +40,17 @@
         </div>
       {/if}
     {/foreach}
+    {block name='free_delivery'}
+      {assign var="freeAmount" value=floatval(Configuration::get('PS_SHIPPING_FREE_PRICE')) -
+                                floatval($cart.totals.total_including_tax.value) }
+      {if $freeAmount > 0}
+        <div class="free_delivery_message border mt-4 p-2">
+            {l s='Do darmowej dostawy brakuje:' d='Shop.Istheme'} {Tools::displayPrice($freeAmount)}
+        </div>
+      {/if}
+    {/block}
+
+
 
     {block name='cart_summary_totals'}
       {include file='checkout/_partials/cart-summary-totals.tpl' cart=$cart}

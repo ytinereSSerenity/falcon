@@ -208,4 +208,13 @@ body .nav_logout {
 .logo.img-fluid {
   @apply max-h-[70px];
 }
+
+@media (max-width: 768px) {
+  .fixed__mobile{
+    @apply fixed bottom-0 w-full z-20;
+    .container{
+      @apply max-w-full
+    }
+  }
+}
 /* top header END */

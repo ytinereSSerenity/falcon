@@ -223,5 +223,5 @@ body .nav_logout {
 }
 .modal-backdrop,
 .dropdown-menu.show::before {
-  @apply bg-gray-200/70 backdrop-blur-[5px] !important;
+  @apply bg-slate-200/50 backdrop-blur-sm !important;
 }

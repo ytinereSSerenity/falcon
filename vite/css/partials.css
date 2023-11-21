@@ -19,23 +19,31 @@
   }
 .blockcart{
     .dropdown-menu{
-        @apply z-20 will-change-auto  fixed m-0 p-0 -right-96 left-auto transform-none  top-0 block transition-all duration-200 rounded-l-[25px] border-0 xl:min-w-[25rem] !important;
+        @apply pointer-events-none z-20 will-change-auto fixed m-0 p-0 -right-[27rem] left-auto transform-none  top-0 block transition-all duration-500 ease-out rounded-l-[25px] border-0 xl:min-w-[25rem] !important;
        
     }
     .dropdown-menu.show{
-        @apply !right-0;
+        @apply !pointer-events-auto !right-0;
         
     }
-    .dropdown-menu.show::before{
+    .dropdown-menu::before{
         content: '';
-        @apply fixed w-screen h-screen left-0 top-0 block 
-
+        @apply fixed w-screen h-screen left-0 top-0 block opacity-0 transition-all duration-300 ease-out
+    }
+    .dropdown-menu.show::before{
+ @apply opacity-100
     }
     .cart-dropdown__content {
         @apply h-screen flex flex-col z-10 relative bg-white pt-5;
         .cart-dropdown__products{
             @apply max-h-max !mb-auto
         }
+    }
+    .cart-products{
+        @apply pr-6
+    }
+    .remove-from-cart{
+        @apply text-black
     }
 }
 

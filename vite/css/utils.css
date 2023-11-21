@@ -210,11 +210,18 @@ body .nav_logout {
 }
 
 @media (max-width: 768px) {
-  .fixed__mobile{
+  .fixed__mobile {
     @apply fixed bottom-0 w-full z-20;
-    .container{
-      @apply max-w-full
+    .container {
+      @apply max-w-full;
     }
   }
 }
 /* top header END */
+.modal-backdrop.show {
+  @apply !opacity-100;
+}
+.modal-backdrop,
+.dropdown-menu.show::before {
+  @apply bg-gray-200/70 backdrop-blur-[5px] !important;
+}

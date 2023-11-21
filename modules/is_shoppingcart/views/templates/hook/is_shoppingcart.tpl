@@ -67,10 +67,13 @@
             {/foreach}
           </div>
 
-          <div class="cart-summary-line cart-total">
+          <div class="cart-summary-line cart-total mt-4"> 
             <span class="label">{$cart.totals.total.label}</span>
             <span class="value">{$cart.totals.total.value}</span>
           </div>
+          {block name='free_delivery'}
+            {include file='components/freedelivery.tpl' cart=$cart}
+          {/block}
 
           <div class="mt-3">
             <a href="{$cart_url}" class="btn btn-sm btn-primary btn-block dropdown-close">

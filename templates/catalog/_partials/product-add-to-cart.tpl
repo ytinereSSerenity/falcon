@@ -26,8 +26,8 @@
   {if !$configuration.is_catalog}
 
     {block name='product_quantity'}
-      <div class="product-quantity row mb-1 mx-n1 mt-n2 align-items-center">
-        <div class="qty col-12 col-sm-auto mx-auto mt-2 px-1">
+      <div class="product-quantity ">
+        <div class="qty ">
           <input
             type="number"
             name="qty"
@@ -46,7 +46,7 @@
           >
         </div>
 
-        <div class="add col mt-2 px-1">
+        <div class="add ">
           <button
             class="btn btn-primary add-to-cart btn-block"
             data-button-action="add-to-cart"
@@ -59,7 +59,7 @@
           </button>
         </div>
 
-        <div class="col-auto mt-2 px-1">
+        <div class="col-auto mt-2 px-1 add__actions">
           <div class="js-product-actions-buttons">
             <div class="row mx-n1 mt-n2 align-items-center">
               {hook h='displayProductActions' product=$product}

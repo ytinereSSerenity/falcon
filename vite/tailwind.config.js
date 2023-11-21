@@ -43,7 +43,9 @@ module.exports = {
             13: '0.8125rem'
           },
           lineHeight: {},
-          boxShadow: {},
+          boxShadow: {
+            DEFAULT: '0px -2px 18px 0px rgba(0, 0, 0, 0.10)'
+          },
           spacing: {     
             600: '37.5rem'  
             },

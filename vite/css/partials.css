@@ -14,8 +14,29 @@
       @apply h-auto
     }
     body .header-top__content{
-        @apply bg-white !py-5 !px-3;
-        box-shadow: 0px -2px 18px 0px rgba(0, 0, 0, 0.10);
+        @apply bg-white !py-5 !px-3 shadow;
     }
   }
+.blockcart{
+    .dropdown-menu{
+        @apply z-20 will-change-auto  fixed m-0 p-0 -right-96 left-auto transform-none  top-0 block transition-all duration-200 rounded-l-[25px] border-0 xl:min-w-[25rem] !important;
+       
+    }
+    .dropdown-menu.show{
+        @apply !right-0;
+        
+    }
+    .dropdown-menu.show::before{
+        content: '';
+        @apply fixed w-screen h-screen left-0 top-0 block 
+
+    }
+    .cart-dropdown__content {
+        @apply h-screen flex flex-col z-10 relative bg-white pt-5;
+        .cart-dropdown__products{
+            @apply max-h-max !mb-auto
+        }
+    }
+}
+
 

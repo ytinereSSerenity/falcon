@@ -1,0 +1,28 @@
+{
+	"enableStatusBarItem": true,
+	"enableQuickPick": false,
+	"uploadOnSave": true,
+	"autoDelete": true,
+	"checkGitignore": false,
+	"activeTargets": [
+		"My FTP"
+	],
+	"concurrency": 5,
+	"ignore": [
+		".git/**/*",
+		".vscode/**/*",
+		".vite/**/*",
+		"._dev/**/*"
+	],
+	"targets": [
+		{
+			"name": "My FTP",
+			"type": "sftp",
+			"host": "78.47.21.186",
+			"port": 22,
+			"user": "root",
+			"password": "ssh881S",
+			"dir": "/www/wwwroot/p8.miyostudio.pl/themes/falcon/"
+		}
+	]
+}  

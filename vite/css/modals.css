@@ -1,0 +1,12 @@
+#blockcart-modal{
+    @apply h-auto top-auto bottom-0 lg:top-0 lg:bottom-auto lg:h-full;
+    .modal-dialog {
+        @apply max-h-[90vh] lg:max-h-full max-w-full lg:max-w-[600px] w-full m-0 lg:m-20 lg:mx-auto; 
+    }
+    .modal-content{
+        @apply rounded-t-[25px] rounded-b-none lg:rounded-none;
+    }
+}
+.modal-content{
+    @apply !border-none
+}

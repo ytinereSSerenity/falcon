@@ -75,6 +75,7 @@
             {block name='product_description_short'}
               <div id="product-description-short-{$product.id}" class="product-description cms-content">{$product.description_short nofilter}</div>
             {/block}
+        
 
             {if $product.is_customizable && count($product.customizations.fields)}
               {block name='product_customization'}

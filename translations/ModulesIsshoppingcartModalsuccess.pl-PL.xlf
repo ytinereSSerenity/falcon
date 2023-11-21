@@ -4,17 +4,17 @@
     <body>
       <trans-unit id="6354c00dadee375467a1b8bddfdc6aaa">
         <source>Product added to cart</source>
-        <target>Produkt został dodany do koszyka</target>
+        <target>Produkt dodany poprawnie do koszyka</target>
         <note>Line: </note>
       </trans-unit>
       <trans-unit id="856ab109229e8acfcddd5c6766a8d956">
         <source>Subtotal:</source>
-        <target>Produkty:</target>
+        <target>Razem:</target>
         <note>Line: </note>
       </trans-unit>
       <trans-unit id="66f51e43606e2baebb8e9c3bfe965da4">
         <source>Shipping:</source>
-        <target>Dostawa:</target>
+        <target>Koszt dostawy:</target>
         <note>Line: </note>
       </trans-unit>
     </body>

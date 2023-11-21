@@ -41,24 +41,18 @@
       {/if}
     {/foreach}
     {block name='free_delivery'}
-      {assign var="freeAmount" value=floatval(Configuration::get('PS_SHIPPING_FREE_PRICE')) -
-                                floatval($cart.totals.total_including_tax.value) }
-      {if $freeAmount > 0}
-        <div class="free_delivery_message border mt-4 p-2">
-            {l s='Do darmowej dostawy brakuje:' d='Shop.Istheme'} {Tools::displayPrice($freeAmount)}
-        </div>
-      {/if}
-    {/block}
-
-
-
-    {block name='cart_summary_totals'}
-      {include file='checkout/_partials/cart-summary-totals.tpl' cart=$cart}
+      {include file='components/freedelivery.tpl' cart=$cart}
     {/block}
 
     {block name='cart_voucher'}
       {include file='checkout/_partials/cart-voucher.tpl'}
     {/block}
+    
+    {block name='cart_summary_totals'}
+      {include file='checkout/_partials/cart-summary-totals.tpl' cart=$cart}
+    {/block}
+ 
+   
 
   </div>
 {/block}

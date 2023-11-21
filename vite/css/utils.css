@@ -209,14 +209,14 @@ body .nav_logout {
   @apply max-h-[70px];
 }
 
-
+@media (max-width: 768px) {
   .fixed__mobile {
-    @apply fixed bottom-0 left-0 w-full z-20 md:relative md:bottom-auto md:left-auto md:z-0 md:w-auto;
+    @apply fixed bottom-0 left-0 w-full z-20;
     .container {
       @apply max-w-full;
     }
   }
-
+}
 /* top header END */
 .modal-backdrop.show {
   @apply !opacity-100;

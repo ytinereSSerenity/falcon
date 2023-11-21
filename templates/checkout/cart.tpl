@@ -23,6 +23,9 @@
  * @license   https://opensource.org/licenses/AFL-3.0 Academic Free License 3.0 (AFL-3.0)
  *}
 {extends file=$layout}
+{block name='header'}
+  {include file='checkout/_partials/header.tpl'}
+{/block}
 
 {block name='content'}
 

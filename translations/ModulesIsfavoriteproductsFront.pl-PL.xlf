@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+  <file original="admin125j26uomeh2qvat6zx" source-language="pl-PL" target-language="pl-PL" datatype="plaintext">
+    <body>
+      <trans-unit id="8df457e12f75ec7f8a77ce2a02ec9f72">
+        <source>Product does not exist in store</source>
+        <target>Produkt nie istnieje</target>
+        <note>Line: </note>
+      </trans-unit>
+      <trans-unit id="18fc22a57e2835f2f89df76e396be952">
+        <source>You have reached limit of %number% products in your favorite list. Login or create an account to add more products.</source>
+        <target>Osiągnąłeś maksymalną (%number%) liczbę produktów na liście. Zaloguj się.</target>
+        <note>Line: </note>
+      </trans-unit>
+      <trans-unit id="c94e9cea216b6467f9de0481503ceb4c">
+        <source>Product already exists in your favorite list</source>
+        <target>Produkt znajduje się już na Twojej liście życzeń</target>
+        <note>Line: </note>
+      </trans-unit>
+      <trans-unit id="c391af618000334ef6a3f2c19499e60a">
+        <source>Product added to your favorite list</source>
+        <target>Produkt został dodany do listy życzeń</target>
+        <note>Line: </note>
+      </trans-unit>
+      <trans-unit id="59b051577c8f3e7544335a1ec60b63bd">
+        <source>Product don't exists in your favorite list</source>
+        <target>Produkt nie znajduje się na Twojej liście życzeń</target>
+        <note>Line: </note>
+      </trans-unit>
+      <trans-unit id="e0c967f51dffa696c1b6470b270e6a72">
+        <source>Product removed from your favorite list</source>
+        <target>Produkt został usunięty z listy życzeń</target>
+        <note>Line: </note>
+      </trans-unit>
+      <trans-unit id="08233f5a18bb179416c652a1dc39164a">
+        <source>Favorite products</source>
+        <target>Twoja lista życzeń</target>
+        <note>Line: </note>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

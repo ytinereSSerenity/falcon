@@ -59,11 +59,9 @@
           </button>
         </div>
 
-        <div class="col-auto mt-2 px-1 add__actions">
-          <div class="js-product-actions-buttons">
-            <div class="row mx-n1 mt-n2 align-items-center">
+        <div class="col-auto px-1 add__actions">
+          <div class="js-product-actions-buttons h-full">
               {hook h='displayProductActions' product=$product}
-            </div>
           </div>
         </div>
       </div>

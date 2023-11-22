@@ -10,3 +10,6 @@
 .modal-content{
     @apply !border-none
 }
+.alert-toast.alert-toast--success{
+    @apply bg-primary-100
+}

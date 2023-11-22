@@ -41,10 +41,10 @@ body#product {
       svg {
         @apply fill-current;
       }
-    }
+    } 
   }
   .product-miniature__thumb {
-    .btn {
+    .btn { 
       @apply w-10 h-10;
     }
   }

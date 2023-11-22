@@ -24,13 +24,25 @@
  *}
 {extends file='page.tpl'}
 
+
 {block name='page_title'}
-  {$page.title}
+  {* {$page.title} *}
 {/block}
 
 {capture assign="errorContent"}
-  <h4>{l s='No products available yet' d='Shop.Theme.Catalog'}</h4>
-  <p>{l s='Stay tuned! More products will be shown here as they are added.' d='Shop.Theme.Catalog'}</p>
+
+  <div class='text-center flex flex-col items-center gap-6'>
+    <svg xmlns="http://www.w3.org/2000/svg" width="200" height="200" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-alert-circle">
+      <circle cx="12" cy="12" r="10"></circle>
+      <line x1="12" y1="8" x2="12" y2="12"></line>
+      <line x1="12" y1="16" x2="12" y2="16"></line>
+    </svg>
+    <h1> {l s='Błąd 404' d='Shop.Istheme'}</h1>
+    {l s='Strona, której szukasz niestety nie istnieje.' d='Shop.Istheme'}
+    <a href="{$urls.pages.home}" class="btn btn-outline-primary">{l s='Wróć na stronę główną' d='Shop.Istheme'}</a>
+  </div>
+
 {/capture}
 
 {block name='page_content_container'}

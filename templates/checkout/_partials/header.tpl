@@ -1,55 +1,130 @@
 {**
- * Copyright since 2007 PrestaShop SA and Contributors
- * PrestaShop is an International Registered Trademark & Property of PrestaShop SA
- *
- * NOTICE OF LICENSE
- *
- * This source file is subject to the Academic Free License 3.0 (AFL-3.0)
- * that is bundled with this package in the file LICENSE.md.
- * It is also available through the world-wide-web at this URL:
- * https://opensource.org/licenses/AFL-3.0
- * If you did not receive a copy of the license and are unable to
- * obtain it through the world-wide-web, please send an email
- * to license@prestashop.com so we can send you a copy immediately.
- *
- * DISCLAIMER
- *
- * Do not edit or add to this file if you wish to upgrade PrestaShop to newer
- * versions in the future. If you wish to customize PrestaShop for your
- * needs please refer to https://devdocs.prestashop.com/ for more information.
- *
- * @author    PrestaShop SA and Contributors <contact@prestashop.com>
- * @copyright Since 2007 PrestaShop SA and Contributors
- * @license   https://opensource.org/licenses/AFL-3.0 Academic Free License 3.0 (AFL-3.0)
- *}
+* Copyright since 2007 PrestaShop SA and Contributors
+* PrestaShop is an International Registered Trademark & Property of PrestaShop SA
+*
+* NOTICE OF LICENSE
+*
+* This source file is subject to the Academic Free License 3.0 (AFL-3.0)
+* that is bundled with this package in the file LICENSE.md.
+* It is also available through the world-wide-web at this URL:
+* https://opensource.org/licenses/AFL-3.0
+* If you did not receive a copy of the license and are unable to
+* obtain it through the world-wide-web, please send an email
+* to license@prestashop.com so we can send you a copy immediately.
+*
+* DISCLAIMER
+*
+* Do not edit or add to this file if you wish to upgrade PrestaShop to newer
+* versions in the future. If you wish to customize PrestaShop for your
+* needs please refer to https://devdocs.prestashop.com/ for more information.
+*
+* @author PrestaShop SA and Contributors <contact@prestashop.com>
+  * @copyright Since 2007 PrestaShop SA and Contributors
+  * @license https://opensource.org/licenses/AFL-3.0 Academic Free License 3.0 (AFL-3.0)
+  *}
 
-{block name='header_nav'}
-  <nav class="header-nav py-2">
+
+
+  {block name='header_top'}
+
+  <div class='py-10'>
     <div class="container">
-      <div class="row">
-        <div class="col text-md-left text-center">
-          <a href="{$urls.base_url}">
-            {images_block webpEnabled=$webpEnabled}
-              <img
-                {if !empty($shop.logo_details)}
-                  src="{$shop.logo_details.src}"
-                  width="{$shop.logo_details.width}"
-                  height="{$shop.logo_details.height}"
-                {else}
-                  src="{$shop.logo}"
-                {/if}
-                class="logo img-fluid"
-                alt="{$shop.name} {l s='logo' d='Shop.Theme.Global'}">
-            {/images_block}
-          </a>
-        </div>
-        <div class="col d-none d-md-block text-right">
-          {hook h='displayNav1'}
+      <div class='flex items-center justify-between flex-col lg:flex-row gap-y-6 lg:gap-y-0 px-6 lg:px-0 '>
+        {include file='components/logo.tpl'}
+        <div class='steps '>
+          <div class='line'>
+          </div>
+          <div class='line line2'>
+          </div>
+          <div class='step step1 {if $page.page_name == "cart"} active {else} success {/if}'>
+            <div class="circle">
+              <svg width="17" height="18" viewBox="0 0 17 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                  d="M16.302 16.2429L15.4744 6.70816C15.406 5.87031 14.7038 5.2265 13.8632 5.23086H12.4691V4.31508C12.4691 1.93193 10.5372 0 8.15406 0C5.7709 0 3.83898 1.93193 3.83898 4.31508V5.23086H2.44489C1.60426 5.22652 0.902122 5.87034 0.833751 6.7082L0.006067 16.2429C-0.0331367 16.6944 0.11893 17.1417 0.42523 17.4758C0.73153 17.8098 1.16395 18 1.61717 18H14.6909C15.1442 18 15.5766 17.8098 15.8829 17.4758C16.1892 17.1417 16.3412 16.6944 16.302 16.2429ZM4.96628 4.31508C4.96628 2.55325 6.39453 1.125 8.15636 1.125C9.91819 1.125 11.3464 2.55325 11.3464 4.31508V5.23086H4.96628V4.31508ZM14.6909 16.8753C14.8299 16.8801 14.9634 16.8213 15.0538 16.7157H15.0537C15.1511 16.6166 15.198 16.4785 15.1813 16.3405L14.3536 6.80573C14.3327 6.55074 14.1191 6.35481 13.8632 6.35612H12.4691V9.04244C12.4691 9.3531 12.2173 9.60494 11.9066 9.60494C11.596 9.60494 11.3441 9.3531 11.3441 9.04244V6.35612H4.96398V9.04244C4.96398 9.3531 4.71214 9.60494 4.40148 9.60494C4.09082 9.60494 3.83898 9.3531 3.83898 9.04244V6.35612H2.44489C2.18904 6.35481 1.97535 6.55076 1.95453 6.80577L1.12685 16.3405C1.11492 16.4779 1.16119 16.614 1.25441 16.7157C1.34763 16.8174 1.47924 16.8752 1.61717 16.8753H14.6909Z"
+                  fill="#58585A" />
+              </svg>
+              <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g clip-path="url(#clip0_67_989)">
+                  <path
+                    d="M12.9784 6.14424C13.2531 6.4189 13.2531 6.86412 12.9784 7.13864L8.26144 11.8558C7.98679 12.1303 7.5417 12.1303 7.26704 11.8558L5.02158 9.61015C4.74692 9.33563 4.74692 8.89041 5.02158 8.61589C5.2961 8.34123 5.74132 8.34123 6.01584 8.61589L7.76418 10.3642L11.984 6.14424C12.2587 5.86972 12.7039 5.86972 12.9784 6.14424ZM18 9C18 13.9747 13.9741 18 9 18C4.02525 18 0 13.9741 0 9C0 4.02525 4.02594 0 9 0C13.9747 0 18 4.02594 18 9ZM16.5938 9C16.5938 4.80254 13.1969 1.40625 9 1.40625C4.80254 1.40625 1.40625 4.80309 1.40625 9C1.40625 13.1975 4.80309 16.5938 9 16.5938C13.1975 16.5938 16.5938 13.1969 16.5938 9Z"
+                    fill="#58585A" />
+                </g>
+                <defs>
+                  <clipPath id="clip0_67_989">
+                    <rect width="18" height="18" fill="white" />
+                  </clipPath>
+                </defs>
+              </svg>
+            </div>
+            <div class='number'>
+              1
+            </div>
+            <div class='text'>
+              {l s='Twój Koszyk' d='Shop.Istheme'}
+            </div>
+          </div>
+          <div
+            class='step step2 {if $page.page_name == "checkout"} active  {elseif $page.page_name == "order-confirmation"} success {/if}'>
+            <div class="circle">
+              <svg width="17" height="18" viewBox="0 0 17 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                  d="M16.302 16.2429L15.4744 6.70816C15.406 5.87031 14.7038 5.2265 13.8632 5.23086H12.4691V4.31508C12.4691 1.93193 10.5372 0 8.15406 0C5.7709 0 3.83898 1.93193 3.83898 4.31508V5.23086H2.44489C1.60426 5.22652 0.902122 5.87034 0.833751 6.7082L0.006067 16.2429C-0.0331367 16.6944 0.11893 17.1417 0.42523 17.4758C0.73153 17.8098 1.16395 18 1.61717 18H14.6909C15.1442 18 15.5766 17.8098 15.8829 17.4758C16.1892 17.1417 16.3412 16.6944 16.302 16.2429ZM4.96628 4.31508C4.96628 2.55325 6.39453 1.125 8.15636 1.125C9.91819 1.125 11.3464 2.55325 11.3464 4.31508V5.23086H4.96628V4.31508ZM14.6909 16.8753C14.8299 16.8801 14.9634 16.8213 15.0538 16.7157H15.0537C15.1511 16.6166 15.198 16.4785 15.1813 16.3405L14.3536 6.80573C14.3327 6.55074 14.1191 6.35481 13.8632 6.35612H12.4691V9.04244C12.4691 9.3531 12.2173 9.60494 11.9066 9.60494C11.596 9.60494 11.3441 9.3531 11.3441 9.04244V6.35612H4.96398V9.04244C4.96398 9.3531 4.71214 9.60494 4.40148 9.60494C4.09082 9.60494 3.83898 9.3531 3.83898 9.04244V6.35612H2.44489C2.18904 6.35481 1.97535 6.55076 1.95453 6.80577L1.12685 16.3405C1.11492 16.4779 1.16119 16.614 1.25441 16.7157C1.34763 16.8174 1.47924 16.8752 1.61717 16.8753H14.6909Z"
+                  fill="#58585A" />
+              </svg>
+              <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g clip-path="url(#clip0_67_989)">
+                  <path
+                    d="M12.9784 6.14424C13.2531 6.4189 13.2531 6.86412 12.9784 7.13864L8.26144 11.8558C7.98679 12.1303 7.5417 12.1303 7.26704 11.8558L5.02158 9.61015C4.74692 9.33563 4.74692 8.89041 5.02158 8.61589C5.2961 8.34123 5.74132 8.34123 6.01584 8.61589L7.76418 10.3642L11.984 6.14424C12.2587 5.86972 12.7039 5.86972 12.9784 6.14424ZM18 9C18 13.9747 13.9741 18 9 18C4.02525 18 0 13.9741 0 9C0 4.02525 4.02594 0 9 0C13.9747 0 18 4.02594 18 9ZM16.5938 9C16.5938 4.80254 13.1969 1.40625 9 1.40625C4.80254 1.40625 1.40625 4.80309 1.40625 9C1.40625 13.1975 4.80309 16.5938 9 16.5938C13.1975 16.5938 16.5938 13.1969 16.5938 9Z"
+                    fill="#58585A" />
+                </g>
+                <defs>
+                  <clipPath id="clip0_67_989">
+                    <rect width="18" height="18" fill="white" />
+                  </clipPath>
+                </defs>
+              </svg>
+
+            </div>
+            <div class='number'>
+              2
+            </div>
+            <div class='text'>
+              {l s='Dostawa i płatność' d='Shop.Istheme'}
+            </div>
+          </div>
+          <div class='step step2  {if $page.page_name == "order-confirmation"}  success {/if}'>
+            <div class="circle">
+              <svg width="17" height="18" viewBox="0 0 17 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                  d="M16.302 16.2429L15.4744 6.70816C15.406 5.87031 14.7038 5.2265 13.8632 5.23086H12.4691V4.31508C12.4691 1.93193 10.5372 0 8.15406 0C5.7709 0 3.83898 1.93193 3.83898 4.31508V5.23086H2.44489C1.60426 5.22652 0.902122 5.87034 0.833751 6.7082L0.006067 16.2429C-0.0331367 16.6944 0.11893 17.1417 0.42523 17.4758C0.73153 17.8098 1.16395 18 1.61717 18H14.6909C15.1442 18 15.5766 17.8098 15.8829 17.4758C16.1892 17.1417 16.3412 16.6944 16.302 16.2429ZM4.96628 4.31508C4.96628 2.55325 6.39453 1.125 8.15636 1.125C9.91819 1.125 11.3464 2.55325 11.3464 4.31508V5.23086H4.96628V4.31508ZM14.6909 16.8753C14.8299 16.8801 14.9634 16.8213 15.0538 16.7157H15.0537C15.1511 16.6166 15.198 16.4785 15.1813 16.3405L14.3536 6.80573C14.3327 6.55074 14.1191 6.35481 13.8632 6.35612H12.4691V9.04244C12.4691 9.3531 12.2173 9.60494 11.9066 9.60494C11.596 9.60494 11.3441 9.3531 11.3441 9.04244V6.35612H4.96398V9.04244C4.96398 9.3531 4.71214 9.60494 4.40148 9.60494C4.09082 9.60494 3.83898 9.3531 3.83898 9.04244V6.35612H2.44489C2.18904 6.35481 1.97535 6.55076 1.95453 6.80577L1.12685 16.3405C1.11492 16.4779 1.16119 16.614 1.25441 16.7157C1.34763 16.8174 1.47924 16.8752 1.61717 16.8753H14.6909Z"
+                  fill="#58585A" />
+              </svg>
+              <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g clip-path="url(#clip0_67_989)">
+                  <path
+                    d="M12.9784 6.14424C13.2531 6.4189 13.2531 6.86412 12.9784 7.13864L8.26144 11.8558C7.98679 12.1303 7.5417 12.1303 7.26704 11.8558L5.02158 9.61015C4.74692 9.33563 4.74692 8.89041 5.02158 8.61589C5.2961 8.34123 5.74132 8.34123 6.01584 8.61589L7.76418 10.3642L11.984 6.14424C12.2587 5.86972 12.7039 5.86972 12.9784 6.14424ZM18 9C18 13.9747 13.9741 18 9 18C4.02525 18 0 13.9741 0 9C0 4.02525 4.02594 0 9 0C13.9747 0 18 4.02594 18 9ZM16.5938 9C16.5938 4.80254 13.1969 1.40625 9 1.40625C4.80254 1.40625 1.40625 4.80309 1.40625 9C1.40625 13.1975 4.80309 16.5938 9 16.5938C13.1975 16.5938 16.5938 13.1969 16.5938 9Z"
+                    fill="#58585A" />
+                </g>
+                <defs>
+                  <clipPath id="clip0_67_989">
+                    <rect width="18" height="18" fill="white" />
+                  </clipPath>
+                </defs>
+              </svg>
+
+            </div>
+            <div class='number'>
+              3
+            </div>
+            <div class='text'>
+              {l s='Gotowe' d='Shop.Istheme'}
+            </div>
+          </div>
+
         </div>
       </div>
-    </div>
-  </nav>
-{/block}
 
-{block name='header_top'}
-{/block}
+    </div>
+  </div>
+
+  {/block}

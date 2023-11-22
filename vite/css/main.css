@@ -17,16 +17,19 @@ body {
 .content h6 {
   @apply my-6;
 }
-.content h2 {
+h1, .h1 {
+  @apply text-4xl lg:text-5xl font-extrabold;
+}
+h2, .h2 {
   @apply text-3xl lg:text-4xl font-extrabold;
 }
-.content h3 {
+h3, .h3  {
   @apply text-2xl lg:text-3xl font-semibold;
 }
-.content h4 {
+h4, .h4  {
   @apply text-lg xl:text-2xl font-medium;
 }
-.content h6 {
+h5, .h5 {
   @apply text-lg font-normal;
 }
 

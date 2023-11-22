@@ -110,12 +110,74 @@ body .custom-radio input[type="radio"] + span {
 }
 
 /* koszyk, powysze mozliwe ze do usuniecia */
-
-.card {
-  .card-body + .card-body {
-    @apply bg-white md:bg-transparent border-none shadow md:shadow-none py-3 md:py-4 fixed__mobile;
-    .btn {
-      @apply w-full md:w-auto;
+body#cart {
+  .card {
+    .card-body + .card-body {
+      @apply bg-white md:bg-transparent border-none shadow md:shadow-none py-3 md:py-4 fixed__mobile;
+      .btn {
+        @apply w-full md:w-auto;
+      }
     }
+  }
+}
+
+.steps {
+  @apply flex items-center justify-between w-full lg:w-[430px] lg:relative lg:mr-6;
+  .line {
+    @apply h-[3px] left-0 w-full absolute bg-gray-200;
+  }
+  .line2 {
+    @apply bg-black;
+  }
+  .step {
+    @apply relative;
+    .number {
+      @apply relative z-10 bg-gray-200 rounded-full w-[30px] h-[30px] text-sm font-semibold flex justify-center items-center text-gray-300;
+    }
+    .circle {
+      @apply relative z-10 bg-white hidden w-[40px] h-[40px] justify-center items-center rounded-full;
+      box-shadow: 0px 25px 40px 0px rgba(0, 0, 0, 0.1),
+        0px -5px 40px 0px rgba(0, 0, 0, 0.06);
+      svg:last-child {
+        @apply hidden;
+      }
+    }
+    .text {
+      @apply font-medium text-black text-opacity-40 mt-2 absolute left-1/2 transform -translate-x-1/2 text-center min-w-[100px] lg:whitespace-nowrap;
+    }
+  }
+  .step.active,
+  .step.success {
+    .number {
+      @apply hidden;
+    }
+    .circle {
+      @apply flex;
+    }
+    .text {
+      @apply text-opacity-100;
+    }
+  }
+  .step.success {
+    .circle {
+      @apply shadow-none  ring-2 ring-gray-950 ring-offset-0 ring-inset;
+      svg:first-child {
+        @apply hidden;
+      }
+      svg:last-child {
+        @apply block;
+      }
+    }
+  }
+}
+
+body#cart {
+  .line2 {
+    @apply w-[34%] lg:w-[28%];
+  }
+}
+body#checkout {
+  .line2 {
+    @apply w-[70%] lg:w-[74%];
   }
 }

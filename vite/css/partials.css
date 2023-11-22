@@ -14,6 +14,9 @@
   .search-form__input:focus {
     @apply !bg-white border-primary-100;
   }
+  .header-top__link:focus, .header-top__link:hover{
+    @apply bg-transparent
+  }
 }
 @media (max-width: 768px) {
   .header-top__row {

@@ -1,4 +1,7 @@
 {extends file='page.tpl'}
+{block name='header'}
+  {include file='checkout/_partials/header.tpl'}
+{/block}
 
 {block name='page_title'}
   {l s='Your order is confirmed' d='Shop.Theme.Checkout'}
@@ -151,4 +154,8 @@
       {hook h='displayOrderConfirmation2'}
     </section>
   {/block}
+{/block}
+
+{block name='footer'}
+  
 {/block}

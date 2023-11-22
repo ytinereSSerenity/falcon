@@ -18,7 +18,7 @@ module.exports = {
           },
           colors: {
             primary: {
-              100: '#F5007B', // main color eg.button
+              100: 'var(--primary)', // main color eg.button
               200: '#FB3C9C', // main version 2 eg. hover main
               300: '#1E2039', //main 2 eq. buttons secondary
               400: '#2C2E4E', // main2 hover

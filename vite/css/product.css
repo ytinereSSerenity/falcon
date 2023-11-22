@@ -25,4 +25,11 @@ body#product {
         }
     }
   }
+  .product-miniature__thumb-link img {
+    @apply mx-auto;
+  }
+  
+  .product-add-to-cart .btn {
+    @apply h-full;
+  }  
 }

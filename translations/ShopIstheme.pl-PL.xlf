@@ -42,6 +42,11 @@
         <target>Chcę założyć konto</target>
         <note>Line: </note>
       </trans-unit>
+      <trans-unit id="e2ab972d6921ec7f38b47ccfca998a50">
+        <source>Per page:</source>
+        <target>Na stronę:</target>
+        <note>Line: </note>
+      </trans-unit>
     </body>
   </file>
 </xliff>

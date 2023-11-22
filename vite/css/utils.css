@@ -24,7 +24,8 @@ a:hover,
 .customer-links a i,
 .customer-links a:not(.active):focus,
 .customer-links a:not(.active):hover,
-.search-form__btn {
+.search-form__btn,
+.comments-pagination span, .page-link {
   @apply text-primary-100;
 }
 
@@ -33,10 +34,13 @@ a:hover,
 .noUi-connect,
 .display-toggle__link.active,
 .custom-control-input:checked ~ .custom-control-label::before,
-.customer-links a.active {
+.customer-links a.active,
+.comments-pagination .page-item.active span, .comments-pagination li.active .page-link, .comments-pagination li.active span, .page-item.active .comments-pagination span, .page-item.active .page-link {
   @apply !bg-primary-100;
 }
-
+.comments-pagination .page-item.active span, .comments-pagination li.active .page-link, .comments-pagination li.active span, .page-item.active .comments-pagination span, .page-item.active .page-link{
+  @apply border-primary-100
+}
 .btn,
 .form-control,
 .custom-select,
@@ -224,4 +228,20 @@ body .nav_logout {
 .modal-backdrop,
 .dropdown-menu.show::before {
   @apply bg-slate-200/50 backdrop-blur-sm !important;
+}
+
+
+/* custom scrollbar */
+::-webkit-scrollbar {
+  @apply w-2 h-2;
+}
+::-webkit-scrollbar-track {
+ @apply bg-white rounded-full;
+}
+* {
+  scrollbar-color: #F98709 white !important;
+  scrollbar-width: 8px;
+}
+::-webkit-scrollbar-thumb {
+  @apply bg-primary-100 rounded-full;
 }

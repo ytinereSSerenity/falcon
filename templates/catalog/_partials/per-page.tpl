@@ -47,7 +47,7 @@
         {else}
           data-href="{$currentUrlFormatted}{if $otherParamsExists}&{else}?{/if}resultsPerPage={$perPage}"
         {/if}>
-         {l s='Per page:' d='Shop.Theme.Catalog'} {$perPage}
+         {l s='Per page:' d='Shop.Istheme'} {$perPage}
       </option>
     {/foreach}
   </select>

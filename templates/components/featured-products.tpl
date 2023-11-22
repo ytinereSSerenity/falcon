@@ -8,6 +8,7 @@
             {$smarty.block.child}
           </p>
         {/block}
+        {display_desktop}
         <div class="featured-products__navigation d-flex flex-grow-0 flex-shrink-0 ml-auto">
           <div class="swiper-button-prev swiper-button-custom position-static">
             <span class="sr-only">{l s='Previous' d='Shop.Theme.Actions'}</span>
@@ -18,27 +19,29 @@
             <span class="material-icons">keyboard_arrow_right</span>
           </div>
         </div>
+        {/display_desktop}
       </div>
     {/block}
 
     {$sliderConfig = [
-      'speed' => 500,
-      'breakpoints' => [
-        '320' => [
-          'slidesPerView' => 2
-        ],
-        '768' => [
-          'slidesPerView' => 3
-        ],
-        '992' => [
-          'slidesPerView' => 4
-        ]
-      ]
-    ]}
+          'speed' => 500,
+          'breakpoints' => [
+            '320' => [
+              'slidesPerView' => 2
+            ],
+            '768' => [
+              'slidesPerView' => 3
+            ],
+            '992' => [
+              'slidesPerView' => 4
+            ]
+          ]
+        ]}
 
-    <div class="swiper product-slider py-1 my-n1" data-swiper='{block name="featured_products_slider_options"}{$sliderConfig|json_encode}{/block}'>
+    <div class="{display_desktop} swiper {/display_desktop} product-slider py-1 my-n1" {display_desktop} 
+      data-swiper='{block name="featured_products_slider_options"}{$sliderConfig|json_encode}{/block}' {/display_desktop}>
       {block name='featured_products_products'}
-        <div class="featured-products__slider swiper-wrapper {block name='featured_products_slider_class'}{/block}">
+        <div class="{display_mobile}  products__slider_mobile {/display_mobile} featured-products__slider swiper-wrapper {block name='featured_products_slider_class'}{/block}">
           {foreach from=$products item="product"}
             {block name='product_miniature'}
               {include file='catalog/_partials/miniatures/product.tpl' product=$product type='slider'}

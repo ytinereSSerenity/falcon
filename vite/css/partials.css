@@ -48,3 +48,22 @@
 }
 
 
+
+
+/* mobile slider */
+
+/* component product swipers */
+  .featured-products{
+    .products__slider_mobile{
+        @apply overflow-x-auto pb-7 
+      }
+      .product-slider{
+        @apply mx-0 lg:-mx-2.5 
+      }
+      .featured-products__slider {
+        @apply  gap-3 lg:gap-0
+      }
+      .product-slider__item{
+        @apply px-0 lg:px-2.5 w-[80%] max-w-full flex-none
+      }
+  }

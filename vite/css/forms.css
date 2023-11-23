@@ -1,0 +1,40 @@
+/* inputs */
+.form-group,
+.checkout-block,
+.input-group:not(.bootstrap-touchspin) {
+  label {
+    @apply my-0;
+  }
+  .form-label,
+  .field-label {
+    @apply text-xs mb-2;
+  }
+  .custom-checkbox {
+    .custom-control-label::after,
+    .custom-control-label::before {
+      @apply h-6 w-6 rounded-[4px] overflow-hidden top-0 hover:border-primary-100;
+    }
+    .custom-control-input:checked ~ .custom-control-label::before {
+      @apply !border-none;
+    }
+    .custom-control-label {
+      @apply !pl-3 !cursor-pointer !mt-0;
+    }
+    input[type="checkbox"] {
+      @apply opacity-0 h-6 w-6;
+    }
+  }
+  > .form-control,
+  .input__holder .form-control,
+  > label > .form-control,
+  .page-content .form-control {
+    @apply h-auto border-gray-200 focus:border-primary-100 text-sm font-medium rounded-[8px] px-5 py-4 placeholder:text-gray-400 placeholder:opacity-100 !important;
+  }
+  select.form-control{
+    @apply py-0 h-[54px] !important
+  }
+  .has-float-label select.form-control {
+    @apply !bg-right;
+    background-position-x: 99% !important;
+  }
+}

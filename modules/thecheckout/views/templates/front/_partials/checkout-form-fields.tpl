@@ -168,8 +168,8 @@
         <div class="js-parent-focus">
           {$field.label}
           {html_select_date
-                field_order=DMY
-                time={$field.value}
+                    field_order=DMY
+                    time={$field.value}
           field_array={$field.name}
           prefix=false
           reverse_years=true
@@ -188,9 +188,11 @@
     {elseif $field.type === 'password'}
 
       {block name='form_field_item_password'}
-        <input class="form-control orig-field" name="{$field.name}" type="password" value=""
-          pattern=".{literal}{{/literal}5,{literal}}{/literal}" placeholder=" " {if $field.required}required{/if}>
-        <span data-link-action="toggle-password-visibility" class="icon-remove-red-eye"></span>
+        <div class='flex items-center input__holder'>
+          <input class="form-control orig-field" name="{$field.name}" type="password" value=""
+            pattern=".{literal}{{/literal}5,{literal}}{/literal}" placeholder=" " {if $field.required}required{/if}>
+          <span data-link-action="toggle-password-visibility" class="icon-remove-red-eye"></span>
+        </div>
       {/block}
 
     {else} {* standard text inputs *}
@@ -219,7 +221,7 @@
 
       {block name='form_field_item_other'}
         <input class="form-control orig-field{$class}" name="{$field.name}" type="{$field.type}" value="{$field.value}"
-          placeholder="{$placeholder}" {if $field.autoCompleteAttribute}autocomplete="{$field.autoCompleteAttribute}" {/if}
+          placeholder="xx{$placeholder}" {if $field.autoCompleteAttribute}autocomplete="{$field.autoCompleteAttribute}" {/if}
           {if $field.maxLength}maxlength="{$field.maxLength}" {/if} {if $field.required}required{/if}>
       {/block}
 
@@ -234,7 +236,8 @@
 
 
     {if $field.type !== 'checkbox' && $field.type !== 'radio-buttons' && $field.type !== 'birthday'}
-      <span class="field-label" {if !$field.required} data-optional-label="{l s='(optional)' mod='thecheckout'}" {/if}>
+      <span class="field-label" {if !$field.required && $field.type !== 'password'}
+        data-optional-label="{l s='(optional)' mod='thecheckout'}" {/if}>
         {$field.label}
       </span>
     {/if}

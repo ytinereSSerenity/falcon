@@ -10,9 +10,9 @@
 
 <div class="block-header account-header">
   {if isset($customer) && $customer.is_logged}
-    {l s='Personal Information' d='Shop.Theme.Checkout'}
+    {l s='Twoje dane' mod='thecheckout'}
   {else}
-    {l s='Create an account' mod='thecheckout'}
+    {l s='Twoje dane' mod='thecheckout'}
   {/if}
 
   {assign var="passwordShallBeVisible" value=(isset($opc_form_checkboxes['create-account']) && 'true' == $opc_form_checkboxes['create-account'])}

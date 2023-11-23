@@ -100,12 +100,13 @@
     {/block}
 </form>
 {if $isInvoiceAddressPrimary}
-    <div class="second-address">
-        <span class="custom-checkbox">
-            <input type="checkbox" data-link-action="x-ship-to-different-address" id="ship-to-different-address"
+    <div class="second-address form-group"> 
+        <span class="custom-checkbox custom-control">
+            <input class="custom-control-input" type="checkbox" data-link-action="x-ship-to-different-address" id="ship-to-different-address"
                 {if $showShipToDifferentAddress} checked{/if}>
+                    <label class="custom-control-label" for="ship-to-different-address">
             <span><i class="material-icons rtl-no-flip checkbox-checked check-icon">&#xE5CA;</i></span>
-            <label for="ship-to-different-address">{l s='Ship to a different address' mod='thecheckout'}</label>
+          {l s='Ship to a different address' mod='thecheckout'}</label>
         </span>
     </div>
 {/if}

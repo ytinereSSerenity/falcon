@@ -27,8 +27,6 @@
   {include file='checkout/_partials/header.tpl'}
 {/block}
 
-
-
 {block name='breadcrumb'}
   {block name='continue_shopping'}
     <div class="my-3">

@@ -25,9 +25,12 @@
 
 
 
-  {block name='header_top'}
+{block name='header_top'}
 
   <div class='py-10'>
+    <div class='hidden'>
+      {hook h='displayTop'}
+    </div>
     <div class="container">
       <div class='flex items-center justify-between flex-col lg:flex-row gap-y-6 lg:gap-y-0 px-6 lg:px-0 '>
         {include file='components/logo.tpl'}
@@ -127,4 +130,4 @@
     </div>
   </div>
 
-  {/block}
+{/block}

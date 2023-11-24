@@ -1,0 +1,38 @@
+.user-form {
+  @apply max-w-full;
+}
+.account_right {
+  @apply lg:border p-0 lg:p-10;
+  .page-header {
+    h1 {
+      @apply flex items-center mb-6;
+      svg {
+        @apply w-6 h-6 mr-4;
+      }
+    }
+  }
+  table {
+    @apply my-5;
+  }
+}
+.customer-links {
+  .link-item {
+    svg {
+      @apply w-[17px] h-[18px] !important;
+    }
+  }
+  a {
+    @apply font-normal !text-black hover:!text-primary-100 text-opacity-60 pl-0 py-3;
+  }
+  a.active {
+    @apply font-medium !bg-transparent text-opacity-100;
+  }
+  h1 {
+    svg {
+      @apply !hidden;
+    }
+  }
+  .customer-links__footer a{
+    @apply !text-left underline
+  }
+}

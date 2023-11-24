@@ -16,7 +16,8 @@
   {/if}
 
   {assign var="passwordShallBeVisible" value=(isset($opc_form_checkboxes['create-account']) && 'true' == $opc_form_checkboxes['create-account'])}
-  <div id="create_account" class="form-group checkbox">
+  {if !$logged}
+    <div id="create_account" class="form-group checkbox">
     <label>
       <span class="custom-checkbox custom-control">
         <input type="checkbox" name="create-account" id="create-account" class="orig-field custom-control-input"
@@ -33,11 +34,13 @@
       </span>
     </label>
   </div>
+        
 
   <a class="log-in btn btn-primary" href="#" data-link-action="x-offer-login">
     <span class="login">{l s='Zaloguj się' d='Shop.Theme.Customeraccount'}</span>
     <span class="nologin">{l s='Anuluj' d='Shop.Theme.Customeraccount'}</span>
   </a>
+{/if}
 </div>
 <form class="account-fields">
   <div id="hook_displayPersonalInformationTop">{$hook_displayPersonalInformationTop nofilter}</div>

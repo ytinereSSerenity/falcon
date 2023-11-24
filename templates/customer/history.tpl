@@ -25,6 +25,11 @@
 {extends file='customer/page.tpl'}
 
 {block name='page_title'}
+  <svg width="19" height="20" viewBox="0 0 19 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path fill-rule="evenodd" clip-rule="evenodd"
+      d="M9.5 19.8743C14.7377 19.8743 19 15.6119 19 10.3743C19 5.13661 14.7377 0.874268 9.5 0.874268C4.26229 0.874268 0 5.13661 0 10.3743C0 15.6119 4.26234 19.8743 9.5 19.8743ZM9.50064 2.14086C14.0416 2.14086 17.734 5.83318 17.734 10.3742C17.734 14.9152 14.0417 18.6076 9.50064 18.6076C4.95961 18.6076 1.26729 14.9152 1.26729 10.3742C1.26729 5.83318 4.95966 2.14086 9.50064 2.14086ZM12.6673 13.5409C12.5279 13.5409 12.3886 13.4966 12.2714 13.4016L9.10478 10.8683C8.95597 10.7479 8.86728 10.5675 8.86728 10.3743V5.30759C8.86728 4.95925 9.15227 4.67427 9.50061 4.67427C9.84895 4.67427 10.1339 4.95925 10.1339 5.30759V10.0703L13.0631 12.4136C13.3354 12.6321 13.3798 13.0311 13.1613 13.3034C13.0378 13.4586 12.8541 13.5409 12.6673 13.5409Z"
+      fill="#58585A" />
+  </svg>
   {l s='Order history' d='Shop.Theme.Customeraccount'}
 {/block}
 
@@ -32,6 +37,7 @@
   <h6>{l s='Here are the orders you\'ve placed since your account was created.' d='Shop.Theme.Customeraccount'}</h6>
 
   {if $orders}
+    <div class='overflow-auto my-3'>
     <table class="table table-striped table-bordered hidden-sm-down">
       <thead class="thead-default">
         <tr>
@@ -61,18 +67,19 @@
             <td class="align-middle">
               <span
                 class="label label-pill badge {if Tools::getBrightness($order.history.current.color) < 128}text-white{/if}"
-                style="background-color:{$order.history.current.color}"
-              >
+                style="background-color:{$order.history.current.color}">
                 {$order.history.current.ostate_name}
               </span>
             </td>
             <td class="text-sm-center order-actions align-middle">
-              <a class="view-order-details-link btn btn-sm btn-primary" href="{$order.details.details_url}" data-link-action="view-order-details">
+              <a class="view-order-details-link btn btn-sm btn-primary" href="{$order.details.details_url}"
+                data-link-action="view-order-details">
                 {l s='Details' d='Shop.Theme.Customeraccount'}
               </a>
               {if $order.details.reorder_url}
-                <div class="col-sm-6 mt-2">
-                  <a class="reorder-link btn btn-sm btn-primary" href="{$order.details.reorder_url}" data-link-action="view-order-details">
+                <div class="mt-2">
+                  <a class="reorder-link btn btn-sm btn-primary" href="{$order.details.reorder_url}"
+                    data-link-action="view-order-details">
                     {l s='Reorder' d='Shop.Theme.Actions'}
                   </a>
                 </div>
@@ -82,6 +89,7 @@
         {/foreach}
       </tbody>
     </table>
+    </div>
 
     <div class="orders d-md-none">
       {foreach from=$orders item=order}
@@ -105,13 +113,15 @@
           <div class="card-footer">
             <div class="row mt-n2">
               <div class="col-sm-6 mt-2">
-                <a class="view-order-details-link btn btn-primary btn-block btn-sm" href="{$order.details.details_url}" data-link-action="view-order-details">
+                <a class="view-order-details-link btn btn-primary btn-block btn-sm" href="{$order.details.details_url}"
+                  data-link-action="view-order-details">
                   {l s='Details' d='Shop.Theme.Customeraccount'}
                 </a>
               </div>
               {if $order.details.reorder_url}
                 <div class="col-sm-6 mt-2">
-                  <a class="reorder-link btn btn-light btn-block btn-sm" href="{$order.details.reorder_url}" data-link-action="view-order-details">
+                  <a class="reorder-link btn btn-light btn-block btn-sm" href="{$order.details.reorder_url}"
+                    data-link-action="view-order-details">
                     {l s='Reorder' d='Shop.Theme.Actions'}
                   </a>
                 </div>
@@ -122,6 +132,7 @@
       {/foreach}
     </div>
   {else}
-    <div class="alert alert-info" role="alert" data-alert="info">{l s='You have not placed any orders.' d='Shop.Notifications.Warning'}</div>
+    <div class="alert alert-info" role="alert" data-alert="info">
+      {l s='You have not placed any orders.' d='Shop.Notifications.Warning'}</div>
   {/if}
 {/block}

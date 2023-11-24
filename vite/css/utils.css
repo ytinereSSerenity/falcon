@@ -34,8 +34,12 @@ a:hover,
 .customer-links a:not(.active):hover,
 .search-form__btn,
 .comments-pagination span,
-.page-link {
+.page-link
+ {
   @apply text-primary-100;
+}
+.text-primary {
+  @apply text-primary-100 !important;
 }
 
 .product-flags__flag,

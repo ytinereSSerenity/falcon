@@ -304,19 +304,39 @@ body#checkout {
           }
         }
       }
-      .payment_row.selected, .delivery-option-row.selected{
-        @apply  border-primary-100;
+      .payment_row.selected,
+      .delivery-option-row.selected {
+        @apply border-primary-100;
       }
-      .additional-information, .carrier-extra-content{
-        @apply !hidden
+      .additional-information,
+      .carrier-extra-content {
+        @apply !hidden;
       }
-      .payment-option, .delivery-option{
-        @apply flex items-center
+      .payment-option,
+      .delivery-option {
+        @apply flex items-center;
       }
       .delivery-option-row .shipping-radio,
-      .payment_row .custom-radio{
-        @apply mt-0 absolute left-4
+      .payment_row .custom-radio {
+        @apply mt-0 absolute left-4;
       }
+    }
+  }
+  [data-link-action="x-add-new-address"], .customer-addresses select{
+    @apply border rounded !no-underline border-gray-200 hover:border-primary-100 p-2 text-sm font-medium bg-transparent
+  }
+  .saved-addresses-label{
+    @apply text-sm font-medium
+  }
+  .static-customer-info{
+    .customer-name{
+      @apply font-medium
+    }
+  }
+  .block-promo{
+    @apply my-6;
+    .h6{
+      @apply !pb-0 font-normal
     }
   }
 }

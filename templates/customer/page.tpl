@@ -40,7 +40,7 @@
      {include file='customer/customer-links.tpl'}
     </div>
     <div class="pl-lg-5 col-lg-9 col-12">
-      <section id="content" class="{block name='pageContentClass'}page-content {/block}page-content--{$page.page_name}">
+      <section id="content" class="account_right {block name='pageContentClass'}page-content {/block}page-content--{$page.page_name}">
         {$smarty.capture.acc_title nofilter}
 
         {block name='page_content_top'}

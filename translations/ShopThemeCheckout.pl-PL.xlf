@@ -547,6 +547,13 @@
         <target>Numer śledzenia</target>
         <note>Line: </note>
       </trans-unit>
+      <trans-unit id="5068c162a60b5852m973f701333f45c5">
+        <source>Probably a typo? Please try again.</source>
+        <target>Prawdopodobnie literówka. Popraw polę.</target>
+        <note>Line: </note>
+      </trans-unit>
+
+      
     </body>
   </file>
 </xliff>

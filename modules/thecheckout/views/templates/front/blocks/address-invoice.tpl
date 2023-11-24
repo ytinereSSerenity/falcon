@@ -8,7 +8,7 @@
 *  @license   http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
 *}
 
-{if $tc_config->show_i_am_business}
+{if $z_tc_config->show_i_am_business}
     <style>
         {if $hideBusinessFields}
             {literal}
@@ -31,7 +31,7 @@
         {/if}
     </style>
 {/if}
-{if $tc_config->show_i_am_private}
+{if $z_tc_config->show_i_am_private}
     <style>
         {if $hidePrivateFields}
             {literal}
@@ -51,7 +51,8 @@
     </style>
 {/if}
 <div class="block-header address-name-header ">{l s='Billing address' mod='thecheckout'}</div>
-{if $tc_config->show_i_am_business}
+
+{if $z_tc_config->show_i_am_business}
     <div class="business-customer form-group ">
         <span class="custom-checkbox custom-control">
             <input class="custom-control-input" id="i_am_business" type="checkbox" data-link-action="x-i-am-business"
@@ -64,7 +65,7 @@
         </span>
     </div>
 {/if}
-{if $tc_config->show_i_am_private}
+{if $z_tc_config->show_i_am_private}
     <div class="private-customer hidden">
         <span class="custom-checkbox">
             <input id="i_am_private" type="checkbox" data-link-action="x-i-am-private"
@@ -80,12 +81,12 @@
     {block name="address_invoice_form_fields"}
         <section class="form-fields">
             {block name='form_fields'}
-                {if $tc_config->show_i_am_business}
+                {if $z_tc_config->show_i_am_business}
                     <div class="business-fields-container">
                         <div class="business-fields-separator"></div>
                     </div>
                 {/if}
-                {if $tc_config->show_i_am_private}
+                {if $z_tc_config->show_i_am_private}
                     <div class="private-fields-container">
                         <div class="private-fields-separator"></div>
                     </div>

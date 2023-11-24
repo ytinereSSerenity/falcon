@@ -35,7 +35,8 @@
   </div>
 
   <a class="log-in btn btn-primary" href="#" data-link-action="x-offer-login">
-    {l s='Log in instead!' d='Shop.Theme.Customeraccount'}
+    <span class="login">{l s='Zaloguj się' d='Shop.Theme.Customeraccount'}</span>
+    <span class="nologin">{l s='Anuluj' d='Shop.Theme.Customeraccount'}</span>
   </a>
 </div>
 <form class="account-fields">
@@ -55,6 +56,6 @@
     </section>
   {/block}
 </form>
-{if $tc_config->show_button_save_personal_info}
+{if $z_tc_config->show_button_save_personal_info}
   <button id="tc_save_account" class="btn btn-primary">{l s='Save Personal Information' mod='thecheckout'}</button>
 {/if}

@@ -32,7 +32,7 @@
   {assign var="passwordShallBeVisible" value=false} {* default value, which we may change below *}
 {assign var="class" value="{if (true == $field.live)} live{/if}"}
 {if $field.type === 'password' && isset($parentTplName) && $parentTplName === 'account'}
-  {assign var=show_create_account_checkbox value=$ps_config.PS_GUEST_CHECKOUT_ENABLED && $tc_config->create_account_checkbox && (!$customer.is_logged || $customer.is_guest)}
+  {assign var=show_create_account_checkbox value=$ps_config.PS_GUEST_CHECKOUT_ENABLED && $z_tc_config->create_account_checkbox && (!$customer.is_logged || $customer.is_guest)}
   {if $show_create_account_checkbox}
     {assign var="passwordShallBeVisible" value=(isset($opc_form_checkboxes['create-account']) && 'true' == $opc_form_checkboxes['create-account'])}
     <div id="create_account" class="form-group checkbox">
@@ -214,7 +214,7 @@
 
       {* Remove call prefix from phone number - for display purposes, if prefix is shown separately *}
       {* Part 1 *}
-      {if $tc_config->show_call_prefix && ($field.name === 'phone' || $field.name === 'phone_mobile')}
+      {if $z_tc_config->show_call_prefix && ($field.name === 'phone' || $field.name === 'phone_mobile')}
         {assign 'callPrefix' '+'|cat:$field.custom_data['call_prefix']}
         {$field.value = $field.value|replace:{$callPrefix}:''}
       {/if}
@@ -226,7 +226,7 @@
       {/block}
 
       {* Part 2, displayed after input field, due to 'modern' theme, which uses placeholder shown CSS selectors *}
-      {if $tc_config->show_call_prefix && ($field.name === 'phone' || $field.name === 'phone_mobile')}
+      {if $z_tc_config->show_call_prefix && ($field.name === 'phone' || $field.name === 'phone_mobile')}
         <span class="country-call-prefix">{$callPrefix}</span>
       {/if}
 

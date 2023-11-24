@@ -1,4 +1,5 @@
 
+// show/hide checkout products summary
 document.addEventListener('click',function(e){
     if(e.target && e.target.id== 'checkout_products_btn'){
         event.preventDefault();

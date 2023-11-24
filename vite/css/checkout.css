@@ -92,7 +92,7 @@ body#checkout {
         @apply text-sm flex-none whitespace-nowrap my-0 pl-0 lg:ml-auto order-2 lg:order-none;
       }
     }
-    .offer-login,
+
     .form-fields #create_account {
       @apply hidden;
     }
@@ -132,7 +132,7 @@ body#checkout {
       @apply mt-6;
     }
     .product-price.h5,
-    #thecheckout-login-form,
+    .offer-login,
     .address-name-header,
     .private-fields-container {
       @apply !hidden;
@@ -140,30 +140,47 @@ body#checkout {
     .checkout-block {
       @apply border border-gray-200 mb-10;
     }
-    .checkout-block.num-1 {
-      @apply border-b-0 mb-0 pb-0;
+    .checkout-block.num-1,
+    #thecheckout-login-form {
+      @apply border-b-0  mb-0 pb-0;
     }
     .checkout-block.num-2 {
       @apply border-t-0;
     }
+    #thecheckout-login-form {
+      @apply my-0 py-0 border-t-0;
+      .inner-area {
+        @apply py-0;
+      }
+    }
+    #login-form {
+      @apply max-w-full p-0 lg:-mt-2.5;
+    }
     .form-fields,
     .business-fields-container {
-      @apply px-0 lg:px-1 gap-x-6 md:grid md:grid-cols-2;
+      @apply px-0 lg:px-1 gap-x-6 md:grid md:grid-cols-2 accent-primary-100;
       .form-group {
         @apply mb-7 px-0;
       }
       .form-group.email,
       .form-group.password,
       .form-group.countrySelect,
-      .business-fields-container {
+      .business-fields-container,
+      #static-customer-info-container {
         @apply col-span-2;
+      }
+    }
+    #login-form {
+      .form-group.email,
+      .form-group.password {
+        @apply col-span-1;
       }
     }
     .business-fields-container {
       @apply px-0;
     }
     .error-msg {
-      @apply text-red-500 text-sm py-1 rounded;
+      @apply text-red-500 text-xs py-1 rounded;
     }
     .form-group.missing-street-number
       label[data-missing-street-nr-notice]::after {
@@ -175,6 +192,12 @@ body#checkout {
       height: fit-content;
       .checkout-block {
         @apply mb-0 border-none;
+      }
+    }
+    /* left column */
+    .checkout-area-3 {
+      .error-msg {
+        @apply absolute bottom-2 my-0 transform translate-y-full;
       }
     }
     #thecheckout-cart-summary,
@@ -194,6 +217,11 @@ body#checkout {
         @apply !min-w-0;
       }
     }
+    #thecheckout-confirm {
+      .error-msg {
+        @apply my-3;
+      }
+    }
     .shopping-cart-header:not(.sc_header) {
       @apply !hidden;
     }
@@ -202,17 +230,92 @@ body#checkout {
         @apply transform transition-all duration-200;
       }
     }
-    #checkout_products{
-      @apply max-h-0 overflow-hidden transition-all duration-200 ease-in-out
+    #checkout_products {
+      @apply max-h-0 overflow-hidden transition-all duration-200 ease-in-out;
     }
     .checkout-block.open {
-      #checkout_products{
-        @apply max-h-[1000px]
+      #checkout_products {
+        @apply max-h-[1000px];
       }
       #checkout_products_btn {
         svg {
           @apply -scale-y-100;
         }
+      }
+    }
+    .log-in {
+      .nologin {
+        @apply hidden;
+      }
+    }
+    .log-in.active {
+      .login {
+        @apply hidden;
+      }
+      .nologin {
+        @apply block;
+      }
+    }
+    #thecheckout-account.active {
+      .account-fields {
+        @apply hidden;
+      }
+      #create_account {
+        @apply opacity-0 pointer-events-none;
+      }
+    }
+    .sociallogin__outer {
+      @apply relative;
+      .sociallogin {
+        @apply !mb-0 pb-6 pt-6 md:flex-row justify-center;
+        .btn__login {
+          @apply lg:px-16;
+        }
+      }
+      .loginhr {
+        @apply top-6;
+        div {
+          @apply bg-white;
+        }
+      }
+    }
+    .payment-options,
+    .delivery-options {
+      @apply w-full col-span-2;
+      .delivery-option-row,
+      .payment_row {
+        @apply border border-gray-200  my-2.5 rounded-[8px] relative  hover:border-gray-300;
+        .delivery-option-logo {
+          @apply hidden;
+        }
+        label {
+          @apply px-5 py-5 w-full pl-14 cursor-pointer;
+          .row,
+          .h6 {
+            @apply text-sm font-medium text-black text-opacity-50;
+          }
+          .h6 {
+            @apply text-opacity-100;
+          }
+          .row {
+            @apply flex items-center justify-between;
+          }
+          .delivery-option-price {
+          }
+        }
+      }
+      .payment_row.selected, .delivery-option-row.selected{
+        @apply  border-primary-100;
+      }
+      .additional-information, .carrier-extra-content{
+        @apply !hidden
+      }
+      .payment-option, .delivery-option{
+        @apply flex items-center
+      }
+      .delivery-option-row .shipping-radio,
+      .payment_row .custom-radio{
+        @apply mt-0 absolute left-4
       }
     }
   }

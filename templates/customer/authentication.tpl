@@ -38,10 +38,13 @@
             <h4 class="text-center h3 mb-3">
               {l s='Login' d='Shop.Istheme'}
             </h4>
-            {render file='customer/_partials/login-form.tpl' ui=$login_form}
             {block name='display_after_login_form'}
               {hook h='displayCustomerLoginFormAfter'}
             {/block}
+            {include file="components/sociallogin.tpl"}
+
+            {render file='customer/_partials/login-form.tpl' ui=$login_form}
+           
           </div>
         </section>
 

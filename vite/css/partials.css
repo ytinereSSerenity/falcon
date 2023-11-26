@@ -74,24 +74,6 @@
   }
 }
 
-/* login, register social login */
-
 .user-form__content {
   @apply relative;
-}
-
-.sociallogin {
-  @apply flex flex-col gap-3 mt-6 mb-12 lg:mt-10 lg:mb-16;
-  .btn__login {
-    @apply flex text-center justify-center relative items-center px-12 py-4 border border-gray-200 rounded-full font-medium text-sm cursor-pointer hover:bg-gray-200;
-    svg {
-      @apply absolute left-4;
-    }
-  }
-}
-.loginhr {
-  @apply right-0 h-0.5 bg-gray-200 absolute left-0 flex items-center justify-center -mt-4 lg:-mt-8;
-  div {
-    @apply font-medium text-[10px] tracking-[4.1px] bg-gray-100 px-4;
-  }
 }

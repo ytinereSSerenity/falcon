@@ -52,7 +52,8 @@ a:hover,
 .comments-pagination li.active .page-link,
 .comments-pagination li.active span,
 .page-item.active .comments-pagination span,
-.page-item.active .page-link {
+.page-item.active .page-link,
+.ets_search_block_top .btn.button-search {
   @apply !bg-primary-100;
 }
 .comments-pagination .page-item.active span,

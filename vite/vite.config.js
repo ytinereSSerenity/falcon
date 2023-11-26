@@ -5,7 +5,7 @@ import path from "path";
 // import commonjs from '@rollup/plugin-commonjs';
 // import resolve from '@rollup/plugin-node-resolve';
 // import inject from '@rollup/plugin-inject';
-// import { viteExternalsPlugin } from "vite-plugin-externals";
+import { viteExternalsPlugin } from "vite-plugin-externals";
 
 // import legacy from '@vitejs/plugin-legacy';
 // https://vitejs.dev/config/
@@ -32,11 +32,11 @@ export default defineConfig({
     // 	$: 'jQuery',
     // 	jquery: 'jQuery'
     // }),
-    // viteExternalsPlugin({
-    //   prestashop: "prestashop",
-    //   $: "$",
-    //   jquery: "jQuery",
-    // }),
+    viteExternalsPlugin({
+      prestashop: "prestashop",
+      $: "$",
+      jquery: "jQuery",
+    }),
     // legacy({
     // 	targets: [ 'ie >= 11' ],
     // 	additionalLegacyPolyfills: [ 'regenerator-runtime/runtime' ]

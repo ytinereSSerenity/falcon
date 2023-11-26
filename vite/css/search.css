@@ -1,0 +1,33 @@
+.ets_search_block_top {
+  div.search_block_results {
+    @apply top-auto mb-8;
+  }
+}
+
+#saerchModalets {
+  .saved_search {
+    @apply bg-gray-200 text-center px-4 overflow-hidden max-h-0 transition-all duration-100;
+    .saved_search__name {
+      @apply bg-white rounded-full text-gray-300 px-2 lg:px-3 py-2;
+    }
+
+    .saved_search__list {
+      @apply flex flex-wrap gap-3 mt-5 justify-center overflow-hidden;
+    }
+    .saved_search__list.showmore {
+    }
+    .saved_search__list:not(.showmore) {
+      @apply !h-auto;
+    }
+    button {
+      @apply underline mt-4;
+    }
+  }
+  .saved_search.shown {
+    @apply py-4 lg:py-8 max-h-[1000px];
+  }
+}
+
+.bg_overlay_search {
+  @apply !hidden;
+}

@@ -22,7 +22,7 @@
     {$smarty.block.parent}
 {/block}
 {block name="content_wrapper"}
-    <div id="content-wrapper" class="ybc_search_page_content">
+    <div id="content-wrapper" class=" col-12 js-content-wrapper">
         {block name='product_list_header'}
             {if isset($keyWord) && $keyWord}
                 <h1 id="js-product-list-header" class="h2">

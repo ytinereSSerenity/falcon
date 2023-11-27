@@ -31,3 +31,27 @@
 .bg_overlay_search {
   @apply !hidden;
 }
+
+#module-ybc_blocksearch-blocksearch {
+  .ybc_search_page_content
+    .content_tab
+    .wrap_content.wrap_content_product
+    .view_number_show {
+    @apply px-0;
+  }
+  .wrap_content_product form::before {
+    @apply !hidden;
+  }
+  .wrap_content_product form {
+    @apply relative top-auto right-auto;
+  }
+  .content_tab article {
+    @apply float-none;
+  }
+  .wrap_header_tap ul li.active a{
+    @apply bg-primary-100;
+  }
+  .ybc_search_sort_by_form{
+    @apply !hidden
+  }
+}

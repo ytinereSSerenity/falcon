@@ -8,5 +8,6 @@
 @import './modals.css';
 @import './account.css';
 @import './sociallogin.css';
-@import './search.css';
+/* // add this if search module est exist */
+@import './search.css'; 
 

@@ -49,3 +49,38 @@ body#product {
     }
   }
 }
+
+#js-product-list{
+.products-list.row {
+  @apply !mx-0 gap-2.5 lg:gap-4 grid grid-cols-2 lg:grid-cols-3 xl:grid-cols-4
+}
+
+  .products-list__block{
+    @apply px-0 mb-0
+  }
+  .products-list__block--grid{
+    @apply max-w-full flex-auto
+  }
+  
+}
+
+.product-miniature{
+  .product-miniature__title{
+    @apply h-auto
+  }
+  .product-miniature__pricing{
+    @apply mt-auto
+  }
+  .product-miniature__thumb-link{
+    img{
+      @apply w-full
+    }
+  }
+  .quick-view {
+    @apply !hidden
+  }
+}
+
+.swiper-slide.product-slider__item{
+  @apply h-auto
+}

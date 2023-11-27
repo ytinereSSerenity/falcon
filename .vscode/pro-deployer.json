@@ -17,12 +17,12 @@
 	"targets": [
 		{
 			"name": "My FTP",
-			"type": "sftp",
-			"host": "78.47.21.186",
-			"port": 22,
-			"user": "root",
-			"password": "ssh881S",
-			"dir": "/www/wwwroot/p8.miyostudio.pl/themes/falcon/"
+			"type": "ftp",
+			"host": "pixel44.jchost11.pl",
+			"port": 21,
+			"user": "ecarla@pixel44.jchost11.pl",
+			"password": "cN1yANKgT4zKBfUUk7UK",
+			"dir": "/themes/falcon/"
 		}
 	]
 }  

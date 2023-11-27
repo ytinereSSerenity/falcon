@@ -14,7 +14,7 @@
   &__dropdown {
     margin: -#{$modal-inner-padding} -#{$modal-inner-padding} map.get($spacers, 3);
     border-bottom: 1px solid $border-color;
-    @include media-breakpoint-up(md) {
+    @include media-breakpoint-up(lg) {
       position: relative;
       display: flex;
       align-items: center;

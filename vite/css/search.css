@@ -55,3 +55,7 @@
     @apply !hidden
   }
 }
+
+.bg_overlay_search + header{
+  @apply z-20
+}

@@ -46,9 +46,7 @@
         <div class='products-list row '>
         {foreach from=$datas item="product"}
             {if isset($show_description) && $show_description}
-       
-                    {include file="catalog/_partials/miniatures/product.tpl" product=$product page=$page}
-              
+                    {include file="catalog/_partials/miniatures/product.tpl" product=$product page=$page}  
             {else}
                 {include file="catalog/_partials/miniatures/product.tpl" product=$product page=$page productClasses=$productClasses}
             {/if}

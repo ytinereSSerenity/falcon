@@ -24,7 +24,7 @@
             {if $node.children|count}
             {* Cannot use page identifier as we can have the same page several times *}
             {assign var=_expand_id value=10|mt_rand:100000}
-            <span class="d-block d-md-none">
+            <span class="d-block d-lg-none">
                 <span data-target="#top_sub_menu_{$_expand_id}" data-toggle="collapse"
                       class="d-block navbar-toggler icon-collapse">
                   <i class="material-icons">&#xE313;</i>
@@ -33,7 +33,7 @@
           </div>
           {/if}
           {if $node.children|count}
-            <div class="{if $depth === 0}main-menu__sub {/if} collapse d-md-block" data-collapse-hide-mobile
+            <div class="{if $depth === 0}main-menu__sub {/if} collapse " data-collapse-hide-mobile
                  id="top_sub_menu_{$_expand_id}" role="group" aria-labelledby="{$node.page_identifier}"
                  aria-expanded="false" aria-hidden="true">
               <div {if $depth === 0}class="menu-sub__content"{/if}>
@@ -47,7 +47,7 @@
   {/if}
 {/function}
 
-<div class="d-none d-md-block col-12 header-top__block header-top__block--menu mt-1">
+<div class="d-none  col-12 header-top__block header-top__block--menu mt-1">
   <div class="main-menu" id="_desktop_top_menu">
     {menu nodes=$menu.children}
   </div>

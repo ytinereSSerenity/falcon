@@ -171,7 +171,7 @@ body .nav_logout {
 /* replace colors END */
 
 /* for things goes down - sticky bottom */
-@media (max-width: 768px) {
+@media (max-width: 992px) {
   .fixed__mobile {
     @apply fixed bottom-0 left-0 w-full z-20;
     .container {

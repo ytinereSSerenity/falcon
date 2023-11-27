@@ -1,4 +1,7 @@
 #header {
+  .header-top {
+    @apply border-0;
+  }
   .header-top__link {
     @apply hover:text-primary-100;
     svg {
@@ -19,7 +22,7 @@
     @apply bg-transparent;
   }
 }
-@media (max-width: 768px) {
+@media (max-width: 992px) {
   .header-top__row {
     @apply justify-between sm:justify-evenly flex;
   }
@@ -76,4 +79,10 @@
 
 .user-form__content {
   @apply relative;
+}
+
+.breadcrumb {
+  .breadcrumb-item:first-child {
+    @apply pl-0;
+  }
 }

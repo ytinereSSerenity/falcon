@@ -21,6 +21,13 @@
   .header-top__link:hover {
     @apply bg-transparent;
   }
+  #_desktop_contact_link{
+@apply flex items-center gap-x-16;
+ 
+}
+}
+#contact-link{
+  @apply flex items-center gap-x-4
 }
 @media (max-width: 992px) {
   .header-top__row {

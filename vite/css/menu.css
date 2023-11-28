@@ -5,7 +5,10 @@
     @apply border-0;
   }
   .mm_blocks_ul {
-    @apply grid grid-cols-3 gap-4;
+    @apply grid grid-cols-3 lg:gap-2 xl:gap-4;
+    .mm_blocks_li2{
+      @apply p-0
+    }
     .mm_blocks_li.HTML,
     .mm_blocks_li.PRODUCT {
       @apply col-span-3;

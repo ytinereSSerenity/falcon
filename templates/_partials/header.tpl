@@ -102,7 +102,9 @@
 
                 </div>
             </div>
+            {hook h='displayNavFullWidth'}
         </div>
+        
     </div>
-    {hook h='displayNavFullWidth'}
+
 {/block}
